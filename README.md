@@ -1,22 +1,69 @@
-# cra-template-tailwindcss-typescript
 
-A streamlined [Tailwind CSS v3.1](https://tailwindcss.com) template for [Create React App](https://github.com/facebook/create-react-app) in [TypeScript](https://www.typescriptlang.org/).
+# NPM PACKS
+NPM PACK is a React and TypeScript web app based application where you can search and find your desired npm package.
+## Major Technologies
+- [ ] HTML5
+- [ ] CSS
+- [ ] Tailwind CSS
+- [ ] JAVASCRIPT
+- [ ] REACT
+- [ ] TYPESCRIPT
+- [ ] REDUX
+- [ ] NPM
+### Demo
 
-> This template installs and sets up [Tailwind CSS](https://tailwindcss.com) with TypeScript support.
+### Screenshots
+![](./public/images/mock.jpg)
 
-## Usage
+### Install & Setup
+To setup and install this NPM PACKS project, follow the below steps:
+- Clone this project by the command: 
 
-```bash
-npx create-react-app --template tailwindcss-typescript
+```
+$ git clone https://github.com/aliatayee/npm-packs
 ```
 
-## Credits
+- Then switch to the project folder by the bellow query:
 
-This project was made possible thanks to the following projects.
+```
+$ cd npm-pack
+```
 
-1. [GeoffSelby/cra-template-tailwindcss](https://github.com/GeoffSelby/cra-template-tailwindcss) - A streamlined Tailwind CSS template for Create React App (in JavaScript).
-2. [cra-template-typescript](https://github.com/facebook/create-react-app/tree/master/packages/cra-template-typescript) - An official TypeScript template for create-react-app.
+- Then run the below command to install dependencies
 
-## License
+```
+$ npm i
+```
+- Finally, run the below command to start the project.
 
-MIT © [Sung M. Kim](https://sung.codes)
+```
+$ npm start
+```
+
+## Run tests 
+To run the tests for linters locally, you must have node installed on your computer. Install the necessary packages. Run npx stylelint "*/.{css,scss}" Run npx hint . Run npx eslint .
+
+### Prerequisites
+
+- IDE to edit and run the code (We use Visual Studio Code 🔥).
+- Git to versionning your work.
+
+### Authors
+👤 **Ali**
+
+- GitHub: [@aliatayee](https://github.com/aliatayee)
+- Twitter: [@aqaatayee](https://twitter.com/aqaatayee)
+
+
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
