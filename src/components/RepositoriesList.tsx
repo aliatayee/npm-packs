@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useRef, useEffect } from 'react';
 import { useActions } from '../hooks/useActions';
 import { useTypedSelector } from '../hooks/useTypedSelector';
+import Footer from './Footer';
 import { Shimmer } from './ShimmerPlaceholder';
 
 const RepositoriesList: React.FC = () => {
@@ -20,12 +21,12 @@ const RepositoriesList: React.FC = () => {
     }
     return (
         <div>
-            <section className="text-gray-400 body-font bg-gray-900 min-h-screen">
+            <section className="text-gray-400 body-font bg-gray-900 min-h-screen grid content-between">
                 <div className="container px-5 py-24 mx-auto">
                     <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
                         <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Grab your most desired package!</h1>
                         <p className="lg:w-1/2 w-full leading-relaxed text-opacity-80">Easily find out whatever npm pack you need and toggle over many packages</p>
-                        <form onSubmit={onSubmit} className="lg:w-1/2 mt-5">
+                        <form onSubmit={onSubmit} className="lg:w-1/2 md:w-full w-full mt-5">
                             <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
                             <div className="relative">
                                 <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -42,25 +43,25 @@ const RepositoriesList: React.FC = () => {
                         {!error && !loading && data.map((item: any) =>
                             <div className="xl:w-1/3 md:w-1/2 w-full p-4  shadow-inner ">
 
-                                <div className="border border-gray-700 min-h-full grid content-between max-h-56 border-opacity-75 p-6 rounded-lg">
+                                <div className="border border-gray-700 min-h-full grid content-between max-h-72 border-opacity-75 p-6 rounded-lg">
                                     <div className="w-20 h-8 inline-flex items-center justify-center rounded-md bg-gray-800 text-red-400 mb-4">
                                         <h2 className='font-bold'> V-{item.package.version} </h2>
                                     </div>
                                     <h2 className="text-lg text-white font-medium title-font mb-2">{item.package.name}</h2>
                                     <p className="leading-relaxed text-base truncate">{item.package.description}</p>
-                                    <div className='flex justify-between'>
+                                    <div className='flex justify-between flex-wrap'>
                                         <a href={item.package.links.repository} target="_blank" rel='noreferrer'>
-                                            <div className="w-24 h-8 inline-flex items-center justify-center mt-3 rounded-md bg-gray-800 text-red-400 ">
+                                            <div className="lg:w-24 md:w-24 w-20 h-8 inline-flex items-center justify-center mt-3 rounded-md bg-gray-800 text-red-400 ">
                                                 <h4 >Github</h4>
                                             </div>
                                         </a>
                                         <a href={item.package.links.homepage} target="_blank" rel='noreferrer'>
-                                            <div className="w-24 h-8 inline-flex items-center justify-center mt-3 rounded-md bg-gray-800 text-red-400 ">
-                                                <h4 >Homepage</h4>
+                                            <div className="lg:w-24 md:w-24 w-20 h-8 inline-flex items-center justify-center mt-3 rounded-md bg-gray-800 text-red-400 ">
+                                                <h4 >Home</h4>
                                             </div>
                                         </a>
                                         <a href={item.package.links.npm} target="_blank" rel='noreferrer'>
-                                            <div className="w-24 h-8 inline-flex items-center justify-center mt-3 rounded-md bg-gray-800 text-red-400 ">
+                                            <div className="lg:w-24 md:w-24 w-20 h-8 inline-flex items-center justify-center mt-3 rounded-md bg-gray-800 text-red-400 ">
                                                 <h4 >NPM</h4>
                                             </div>
                                         </a>
@@ -73,8 +74,8 @@ const RepositoriesList: React.FC = () => {
                     
 
                 </div>
+            <Footer />
             </section>
-
         </div>
     )
 }
