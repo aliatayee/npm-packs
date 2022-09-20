@@ -44,8 +44,8 @@ const RepositoriesList: React.FC = () => {
                             <div className="xl:w-1/3 md:w-1/2 w-full p-4  shadow-inner ">
 
                                 <div className="border border-gray-700 min-h-full grid content-between max-h-72 border-opacity-75 p-6 rounded-lg">
-                                    <div className="w-20 h-8 inline-flex items-center justify-center rounded-md bg-gray-800 text-red-400 mb-4">
-                                        <h2 className='font-bold'> V-{item.package.version} </h2>
+                                    <div className="w-24 pl-3 pr-3 h-8 inline-flex items-center justify-center rounded-md bg-gray-800 text-red-400 mb-4">
+                                        <h2 className='font-bold truncate'>V-{item.package.version} </h2>
                                     </div>
                                     <h2 className="text-lg text-white font-medium title-font mb-2">{item.package.name}</h2>
                                     <p className="leading-relaxed text-base truncate">{item.package.description}</p>
