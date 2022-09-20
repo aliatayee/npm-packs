@@ -3,9 +3,17 @@ input#default-search {
 }
 @font-face {
     font-family: Gilroy-Regular;
+    src: url(./fonts/Gilroy-Medium.woff);
+  }
+@font-face {
+    font-family: Gilroy-Bold;
     src: url(./fonts/Gilroy-Bold.woff);
   }
 
 * {
     font-family: 'Gilroy-Regular';
+}
+
+.title-font {
+    font-family: 'Gilroy-Bold';
 }
