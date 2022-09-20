@@ -11,7 +11,7 @@ NPM PACK is a React and TypeScript web app based application where you can searc
 - [ ] REDUX
 - [ ] NPM
 ### Demo
-
+[Demo](https://npm-packs.netlify.app/)
 ### Screenshots
 ![](./public/images/mock.jpg)
 
