@@ -1,3 +1,11 @@
 input#default-search {
     outline: none !important;
 }
+@font-face {
+    font-family: Gilroy-Regular;
+    src: url(./fonts/Gilroy-Bold.woff);
+  }
+
+* {
+    font-family: 'Gilroy-Regular';
+}
