@@ -13,7 +13,7 @@ NPM PACK is a React and TypeScript web app based application where you can searc
 ### Demo
 [Demo](https://npm-packs.netlify.app/)
 ### Screenshots
-![](./public/images/mock.jpg)
+![](./src/assets/npm-packs-banner.jpg)
 
 ### Install & Setup
 To setup and install this NPM PACKS project, follow the below steps:
