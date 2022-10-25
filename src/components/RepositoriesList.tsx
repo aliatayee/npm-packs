@@ -4,7 +4,7 @@ import { useActions } from '../hooks/useActions';
 import { useTypedSelector } from '../hooks/useTypedSelector';
 import Footer from './Footer';
 import { Shimmer } from './ShimmerPlaceholder';
-
+import { RiHome5Line, RiGithubFill,RiNpmjsLine } from "react-icons/ri";
 const RepositoriesList: React.FC = () => {
     const [term, setTerm] = useState('');
     const { searchRepositories } = useActions();
@@ -33,7 +33,7 @@ const RepositoriesList: React.FC = () => {
                                     <svg aria-hidden="true" className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                                 </div>
                                 <input type="search" ref={inputRef} value={term} onChange={e => setTerm(e.target.value)} id="default-search" className="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border  focus:ring-red-500 focus:border-red-500 " placeholder="Search npm packages..." required />
-                                <button type="submit" className="text-white absolute right-2.5 bottom-2.5 bg-red-400 hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-md text-sm px-4 py-2">Search</button>
+                                <button type="submit" className="text-white absolute right-2.5 bottom-2.5 bg-red-500 hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-md text-sm px-4 py-2">Search</button>
                             </div>
                         </form>
                         {error && <h3>{error}</h3>}
@@ -45,24 +45,24 @@ const RepositoriesList: React.FC = () => {
 
                                 <div className="border border-gray-700 min-h-full grid content-between max-h-72 border-opacity-75 p-6 rounded-lg">
                                     <div className="w-24 pl-3 pr-3 h-8 inline-flex items-center justify-center rounded-md bg-gray-800 text-red-400 mb-4">
-                                        <h2 className='font-bold truncate'>V-{item.package.version} </h2>
+                                        <h2 className='truncate text-sm font-semibold tracking-widest'>V {item.package.version} </h2>
                                     </div>
-                                    <h2 className="text-lg text-white font-medium title-font mb-2">{item.package.name}</h2>
-                                    <p className="leading-relaxed text-base truncate">{item.package.description}</p>
+                                    <h2 className="text-lg text-white font-medium title-font ">{item.package.name}</h2>
+                                    <p className="leading-relaxed text-base truncate h-12 mb-3">{item.package.description}</p>
                                     <div className='flex justify-between flex-wrap'>
                                         <a href={item.package.links.repository} target="_blank" rel='noreferrer'>
-                                            <div className="lg:w-24 md:w-24 w-20 h-8 inline-flex items-center justify-center mt-3 rounded-md bg-gray-800 text-red-400 ">
-                                                <h4 >Github</h4>
+                                            <div className="lg:w-24 md:w-24 w-20 h-8 inline-flex items-center justify-center  rounded-md bg-gray-700 hover:bg-gray-600 text-white">
+                                                <i><RiGithubFill /></i>
                                             </div>
                                         </a>
                                         <a href={item.package.links.homepage} target="_blank" rel='noreferrer'>
-                                            <div className="lg:w-24 md:w-24 w-20 h-8 inline-flex items-center justify-center mt-3 rounded-md bg-gray-800 text-red-400 ">
-                                                <h4 >Home</h4>
+                                            <div className="lg:w-24 md:w-24 w-20 h-8 inline-flex items-center justify-center rounded-md bg-red-500 hover:bg-red-600 text-white ">
+                                                <i><RiHome5Line /></i>
                                             </div>
                                         </a>
                                         <a href={item.package.links.npm} target="_blank" rel='noreferrer'>
-                                            <div className="lg:w-24 md:w-24 w-20 h-8 inline-flex items-center justify-center mt-3 rounded-md bg-gray-800 text-red-400 ">
-                                                <h4 >NPM</h4>
+                                            <div className="lg:w-24 md:w-24 w-20 h-8 inline-flex items-center justify-center  rounded-md bg-gray-700 hover:bg-gray-600 text-white ">
+                                                <i><RiNpmjsLine /></i>
                                             </div>
                                         </a>
                                     </div>
@@ -71,10 +71,10 @@ const RepositoriesList: React.FC = () => {
                             </div>
                         )}
                     </div>
-                    
+
 
                 </div>
-            <Footer />
+                <Footer />
             </section>
         </div>
     )
